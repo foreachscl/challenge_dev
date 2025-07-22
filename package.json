@@ -4,7 +4,9 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "react": "vite ./react_101/ExpensiveList.jsx"
+    "react": "vite ./react_101/ExpensiveList.jsx",
+    "test:react": "jest react_101",
+    "test:express": "jest express_101"
   },
   "keywords": [],
   "author": "",
@@ -20,10 +22,13 @@
     "babel-jest": "^30.0.4",
     "jest": "^30.0.4",
     "jest-environment-jsdom": "^30.0.4",
-    "vite": "^7.0.5",
-    "supertest": "^6.3.3"
+    "supertest": "^6.3.3",
+    "vite": "^7.0.5"
   },
   "jest": {
     "testEnvironment": "jsdom"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
   }
 }
