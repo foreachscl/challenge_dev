@@ -7,10 +7,6 @@ function fetchData(apiUrl) {
       data = response.json();
       return data;
     })
-    .then(result => {
-      console.log("Datos recibidos:", data);
-      return data;
-    })
     .catch(error => {
       console.error("Ocurrió un error:", error);
     });

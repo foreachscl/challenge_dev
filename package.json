@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "react": "vite ./react_101/ExpensiveList.jsx"
   },
   "keywords": [],
   "author": "",
@@ -18,7 +19,8 @@
     "@testing-library/react": "^16.3.0",
     "babel-jest": "^30.0.4",
     "jest": "^30.0.4",
-    "jest-environment-jsdom": "^30.0.4"
+    "jest-environment-jsdom": "^30.0.4",
+    "vite": "^7.0.5"
   },
   "jest": {
     "testEnvironment": "jsdom"

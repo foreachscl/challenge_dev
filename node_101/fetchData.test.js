@@ -11,6 +11,9 @@ beforeEach(() => {
 });
 
 it('should fetch data from the API', async () => {
-  const data = await fetchData('https://api.example.com/data');
-  expect(fetch).toHaveBeenCalledWith('https://api.example.com/data');
+  const api = 'https://api.example.com/data'
+  const data = await fetchData(api);
+  console.log("Datos recibidos:", data);
+  expect(fetch).toHaveBeenCalledWith(api);
+  expect(data).toBe({"message": 'Success'});
 });

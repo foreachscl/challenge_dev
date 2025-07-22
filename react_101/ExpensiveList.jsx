@@ -1,8 +1,8 @@
 // ExpensiveList.jsx
 
-import React, { useState } from "react";
+import  { useState } from "react";
 
-function calculateTotal(items) {
+export function calculateTotal(items) {
   console.log("Calculando total...");
   return items.reduce((acc, item) => acc + item.price, 0);
 }
