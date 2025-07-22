@@ -1,6 +1,6 @@
 // ExpensiveList.jsx
 
-import  { useCallback, useMemo, useState } from "react";
+import  { useMemo, useState } from "react";
 
 // export function calculateTotal(items) {
 //   console.log("Calculando total...");

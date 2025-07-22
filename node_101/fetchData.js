@@ -1,8 +1,8 @@
 // fetchData.js
 
-async function fetchData(apiUrl) {
+function fetchData(apiUrl) {
   let data = null;
-  return fetch(apiUrl)
+   fetch(apiUrl)
     .then(response => {
       data = response.json();
       return data;
