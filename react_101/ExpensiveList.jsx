@@ -1,6 +1,6 @@
 // ExpensiveList.jsx
 
-import  { useState } from "react";
+import  { useMemo, useState } from "react";
 
 export function calculateTotal(items) {
   console.log("Calculando total...");
@@ -9,11 +9,14 @@ export function calculateTotal(items) {
 
 export default function ExpensiveList({ items }) {
   const [filter, setFilter] = useState("");
-  const filtered = items.filter(item =>
-    item.name.toLowerCase().includes(filter.toLowerCase())
+  const filtered = useMemo(() => 
+    items.filter(item =>
+      item.name.toLowerCase().includes(filter.toLowerCase())
+    ), [items, filter]
   );
 
-  const total = calculateTotal(filtered);
+  // Aquí es donde optimizamos:
+  const total = useMemo(() => calculateTotal(filtered), [filtered]);
 
   return (
     <div>

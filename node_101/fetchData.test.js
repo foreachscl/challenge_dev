@@ -15,5 +15,5 @@ it('should fetch data from the API', async () => {
   const data = await fetchData(api);
   console.log("Datos recibidos:", data);
   expect(fetch).toHaveBeenCalledWith(api);
-  expect(data).toBe({"message": 'Success'});
+  expect(data).toEqual({"message": 'Success'});
 });

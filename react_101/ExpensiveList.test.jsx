@@ -4,11 +4,11 @@ import '@testing-library/jest-dom';
 import ExpensiveList from './ExpensiveList';
 
 // MOCKEAMOS la función
-jest.mock('./calculateTotal', () => ({
+jest.mock('./ExpensiveList', () => ({
   calculateTotal: jest.fn((items) => items.reduce((acc, item) => acc + item.price, 0)),
 }));
 
-import { calculateTotal } from './calculateTotal';
+import { calculateTotal } from './ExpensiveList';
 
 const items = [
   { id: 1, name: 'Apple', price: 1 },
