@@ -5,4 +5,4 @@ const people = [
   { name: "David", city: "Buenos Aires" }
 ];
 
-export default groupBy = () => {}
+export const groupBy = () => {}
