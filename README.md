@@ -1,10 +1,10 @@
 # Challenge 2025
 
-Este proyecto contiene una colección de desafíos de código en JavaScript y React.
+Este proyecto contiene una colección de desafíos de código en JavaScript para Express y React.
 
 ## Estructura del Proyecto
 
-- `node_101/`: Contiene desafíos de JavaScript del lado del servidor (Node.js).
+- `express_101/`: Contiene desafíos de Express.
 - `react_101/`: Contiene desafíos de React.
 
 ## Instalación
@@ -20,5 +20,6 @@ npm install
 Para ejecutar las pruebas unitarias para todos los desafíos, usa el siguiente comando:
 
 ```bash
-npm test
+npm test:react
+npm test:express
 ```
