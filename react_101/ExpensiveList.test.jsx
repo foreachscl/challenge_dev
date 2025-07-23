@@ -1,14 +1,12 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import ExpensiveList from './ExpensiveList';
+import ExpensiveList, { calculateTotal } from './ExpensiveList';
 
 // MOCKEAMOS la función
-jest.mock('./calculateTotal', () => ({
+jest.mock('./ExpensiveList', () => ({
   calculateTotal: jest.fn((items) => items.reduce((acc, item) => acc + item.price, 0)),
 }));
-
-import { calculateTotal } from './calculateTotal';
 
 const items = [
   { id: 1, name: 'Apple', price: 1 },
