@@ -2,6 +2,7 @@ const { TextEncoder, TextDecoder } = require('util');
 global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder;
 global.setImmediate = global.setImmediate || ((fn, ...args) => global.setTimeout(fn, 0, ...args));
+
 const request = require('supertest');
 const app = require('./itemsAPI');
 
@@ -21,10 +22,10 @@ describe('Challenge 1: Filtrado correcto', () => {
     expect(res.body).toHaveLength(3);
   });
 
-  test('Debe fallar si name tiene menos de 1 caracter', async () => {
-    const res = await request(app).get('/api/items').query({ name: '' });
+  test('Debe fallar si name no es un string', async () => {
+    const res = await request(app).get('/api/items').query({ name: 123 });
+    console.log(res.body);
     expect(res.status).toBe(400);
-    expect(res.body.error).toMatch('El parámetro name debe tener al menos 1 caracter');
+    expect(res.body.error).toMatch('El parámetro name debe ser un string');
   });
 });
-
