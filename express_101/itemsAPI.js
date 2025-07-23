@@ -8,15 +8,8 @@ const ITEMS = [
 ];
 
 app.get('/api/items', (req, res) => {
-  const { name } = req.body;
 
-  if (name !== undefined && name.length != 0) {
-    return res.status(400).json({ error: 'Name debe tener al menos 1 caracter' });
-  }
-
-  const result = name ? ITEMS.filter(item => item.name.includes(name)) : [];
-  
-  res.status(200).json(result);
+  res.status(200).json({});
 });
 
 module.exports = app;
