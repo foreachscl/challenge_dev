@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "react": "vite ./react_101/ExpensiveList.jsx",
+    "react": "vite react_101",
     "test:react": "jest react_101",
     "test:express": "jest express_101"
   },
@@ -19,14 +19,22 @@
     "@babel/preset-react": "^7.27.1",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.3.0",
+    "@vitejs/plugin-react": "^4.7.0",
     "babel-jest": "^30.0.4",
     "jest": "^30.0.4",
     "jest-environment-jsdom": "^30.0.4",
     "supertest": "^6.3.3",
-    "vite": "^7.0.5"
-  },
+    "vite": "^7.0.6"
+  },  
   "jest": {
-    "testEnvironment": "jsdom"
+    "testEnvironment": "jsdom",
+    "setupFilesAfterEnv": [
+      "<rootDir>/react_101/setupTests.js"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "jsx"
+    ]
   },
   "dependencies": {
     "express": "^5.1.0"
