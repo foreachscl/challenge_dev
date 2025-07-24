@@ -20,6 +20,6 @@ npm install
 Para ejecutar las pruebas unitarias para todos los desafíos, usa el siguiente comando:
 
 ```bash
-npm test:react
-npm test:express
+npm run test:react
+npm run test:express
 ```
