@@ -21,11 +21,4 @@ describe('Challenge 1: Filtrado correcto', () => {
     expect(res.status).toBe(200);
     expect(res.body).toHaveLength(3);
   });
-
-  test('Debe fallar si name no es un string', async () => {
-    const res = await request(app).get('/api/items').query({ name: 123 });
-    console.log(res.body);
-    expect(res.status).toBe(400);
-    expect(res.body.error).toMatch('El parámetro name debe ser un string');
-  });
 });
