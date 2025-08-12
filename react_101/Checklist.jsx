@@ -6,26 +6,14 @@ export default function Checklist() {
 
   // Agregar nueva tarea
   const handleAdd = (e) => {
-    e.preventDefault();
-    const text = input.trim();
-    if (!text) return;
-    setTasks([...tasks, { id: Date.now(), text, completed: false }]);
-    setInput("");
+
   };
 
   // Marcar como completada
   const toggleTask = (id) => {
-    setTasks(tasks =>
-      tasks.map(task =>
-        task.id === id
-          ? { ...task, completed: !task.completed }
-          : task
-      )
-    );
+
   };
 
-  // Contar tareas pendientes
-  const pendientes = tasks.filter(t => !t.completed).length;
 
   return (
     <div>
@@ -53,7 +41,7 @@ export default function Checklist() {
           </li>
         ))}
       </ul>
-      <div>Tareas pendientes: {pendientes}</div>
+      <div>Tareas pendientes: {tasks.length}</div>
     </div>
   );
 }
